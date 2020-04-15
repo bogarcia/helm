@@ -13,7 +13,7 @@ RUN apk add --update --no-cache curl ca-certificates \
     python-dev \
     py-pip \
     build-base && \
-    pip install awscli==$AWSCLI_VERSION --upgrade --user && \   
+    pip install awscli==$AWSCLI_VERSION && \   
     curl -L ${BASE_URL}/${TAR_FILE} |tar xvz && \
     mv linux-amd64/helm /usr/bin/helm && \
     chmod +x /usr/bin/helm && \
