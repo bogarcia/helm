@@ -2,7 +2,7 @@ FROM alpine:3
 
 
 ENV HELM_VERSION "3.1.2"
-ENV AWSCLI_VERSION "1.16.280"
+ENV AWSCLI_VERSION "1.18.43"
 
 # ENV BASE_URL="https://storage.googleapis.com/kubernetes-helm"
 ENV BASE_URL="https://get.helm.sh"
