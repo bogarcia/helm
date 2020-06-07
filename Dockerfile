@@ -1,5 +1,5 @@
 FROM alpine:3
-
+  
 
 ENV HELM_VERSION "3.1.2"
 ENV AWSCLI_VERSION "1.18.43"
@@ -10,7 +10,9 @@ ENV BASE_URL="https://get.helm.sh"
 ENV TAR_FILE="helm-v${HELM_VERSION}-linux-amd64.tar.gz"
 
 RUN apk add --update --no-cache curl ca-certificates \
-    py-pip \
+    python3 \
+    python3-dev \
+    py3-pip \
     build-base && \
     pip install awscli==$AWSCLI_VERSION boto3 pyyaml && \
     curl -LO https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl && \
