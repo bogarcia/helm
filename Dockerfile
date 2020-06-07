@@ -10,8 +10,6 @@ ENV BASE_URL="https://get.helm.sh"
 ENV TAR_FILE="helm-v${HELM_VERSION}-linux-amd64.tar.gz"
 
 RUN apk add --update --no-cache curl ca-certificates \
-    python \
-    python-dev \
     py-pip \
     build-base && \
     pip install awscli==$AWSCLI_VERSION boto3 pyyaml && \
