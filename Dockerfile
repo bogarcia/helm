@@ -13,7 +13,6 @@ RUN apk add --update --no-cache curl ca-certificates \
     python \
     python-dev \
     py-pip \
-    mysql-client \
     build-base && \
     pip install awscli==$AWSCLI_VERSION boto3 pyyaml && \
     curl -LO https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl && \
